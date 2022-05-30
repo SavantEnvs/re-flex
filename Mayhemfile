@@ -1,0 +1,6 @@
+project: rnshah9/re-flex
+target: re-flex
+tests: null
+
+cmds:
+  - cmd: /repo/bin/reflex @@
