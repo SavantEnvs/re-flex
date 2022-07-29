@@ -2,4 +2,4 @@ project: re-flex
 target: reflex
 
 cmds:
-  - cmd: /repo/bin/reflex @@
+  - cmd: /reflex @@

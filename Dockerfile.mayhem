@@ -7,11 +7,5 @@ COPY . /repo
 WORKDIR /repo
 RUN ./build.sh
 
-RUN mkdir -p /deps
-RUN ldd /repo/bin/reflex | tr -s '[:blank:]' '\n' | grep '^/' | xargs -I % sh -c 'cp % /deps;'
-
 FROM ubuntu:22.04 as package
-
-COPY --from=builder /deps /deps
-COPY --from=builder /repo/bin/reflex /repo/bin/reflex
-ENV LD_LIBRARY_PATH=/deps
+COPY --from=builder /repo/bin/reflex /
