@@ -1,0 +1,6 @@
+project: re-flex
+target: range
+
+cmds:
+  - cmd: /fuzz_range
+    libfuzzer: true
