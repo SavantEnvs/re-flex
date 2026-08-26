@@ -1,0 +1,10 @@
+project: savantenvs/re-flex
+target: range
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/range/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_range
+    libfuzzer: true
