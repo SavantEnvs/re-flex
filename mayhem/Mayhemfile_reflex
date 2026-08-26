@@ -1,0 +1,11 @@
+project: savantenvs/re-flex
+target: reflex
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/reflex/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_reflex
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/reflex/reflex.dict
